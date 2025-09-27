@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@theme{
+  --shadow-xl: 0 0 8px 6px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 0 6px 4px rgba(0, 0, 0, 0.5);
+  
+}
+@layer components{
+  .myanimatecr{
+    animation: ani 2s linear forwards;
+  }
+  @keyframes ani{
+    100%{
+      stroke-dashoffset:70 ;
+    }
+  }
+  .myanimateco{
+    animation: ani1 2s linear forwards;
+  }
+  @keyframes ani1{
+    100%{
+      stroke-dashoffset:141 ;
+    }
+  }
+  .myanimatepr{
+    animation: ani 2s linear forwards;
+  }
+  @keyframes ani{
+    100%{
+      stroke-dashoffset:141 ;
+    }
+  }
+  .myanimatetm{
+    animation: ani 2s linear forwards;
+  }
+  @keyframes ani{
+    100%{
+      stroke-dashoffset:94 ;
+    }
+  }
+  .img-project{
+      @apply  object-cover rounded   hover:scale-110  hover:border-slate-900 transition-all duration-700 hover:brightness-125;
+    }
+  .menu-bar{
+      @apply flex overflow-hidden gap-5 absolute  top-14 flex-col items-center transition-all duration-200 bg-slate-700/80  w-full z-10 rounded   justify-center;
+    }
+}
