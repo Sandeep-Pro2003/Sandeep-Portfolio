@@ -122,29 +122,18 @@ setInterval(() => {
 }, 24)
 
 function sendEmail() {
-  const emailData = {
-    from: document.querySelector("#email").value,
-    name: document.querySelector("#name").value,
-    subject: document.querySelector("#subject").value,
-    message: document.querySelector("#message").value
-  };
-
-  fetch('/api/send-email', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(emailData)
-  })
-  .then(response => {
-    if (response.ok) {
-      alert("Message sent Successfully");
-    } else {
-      alert("Failed to send message");
-    }
-  })
-  .catch(error => {
-    alert("Error sending message");
-    console.error(error);
-  });
+  Email.send({
+    Host: "s1.gmail.com",
+    Username: "sandeepproj0@gmail.com",
+    Password: "Sharma@365",
+    To: 'sandeepproj0@gmail.com',
+    From: document.querySelector("#email").value,
+    Subject: "New Contact from Portfolio Site",
+    Body: "Name: " + document.querySelector("#name").value
+      + "<br> Email: " + document.querySelector("#email").value
+      + "<br> Subject: " + document.querySelector("#subject").value
+      + "<br> Message: " + document.querySelector("#message").value
+  }).then(
+    message => alert("Message sent Successfully")
+  );
 }
