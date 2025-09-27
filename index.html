@@ -404,13 +404,12 @@
               </div>
             <!-- right side  -->
             <div class="mt-20 w-full lg:w-1/2 px-10 mb-15">
-              <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-2 " >
-                <input type="hidden" name="access_key" value="6737a08c-6f02-484f-b260-ecbce67790f8">
+              <form onsubmit="sendEmail(); reset(); return false;" class="flex flex-col gap-2 " >
 
-                <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="text" name="name" placeholder="Enter your name">
-                <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="email" name="email" placeholder="Enter your email">
-                <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="text" name="subject" placeholder="Enter your subject">
-                <textarea class="bg-stone-500 h-40 px-4 py-3 text-black rounded text-md font-semibold" name="message" id=""placeholder="Enter your message"></textarea>
+                <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="text" id="name" name="name" placeholder="Enter your name">
+                <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="email" id="email" name="email" placeholder="Enter your email">
+                <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="text" id="subject" name="subject" placeholder="Enter your subject">
+                <textarea class="bg-stone-500 h-40 px-4 py-3 text-black rounded text-md font-semibold" name="message" id="message"placeholder="Enter your message"></textarea>
                 <button type="submit" class="px-4  w-full py-2 mt-5 border-2 border-cyan-200 hover:bg-cyan-300 rounded-4xl text-md font-semibold hover:text-slate-900 transition-colors duration-700 shadow-xl shadow-cyan-300 cursor-pointer">Submit</button>
               </form>
             </div>
@@ -422,5 +421,6 @@
   <script>
     AOS.init();
   </script>
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
