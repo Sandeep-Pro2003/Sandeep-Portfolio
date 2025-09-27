@@ -123,7 +123,7 @@ setInterval(()=>{
 
 function sendEmail(){
   Email.send({
-    Host : "s1.gmail.com",
+    Host : "s1.gmail.in",
     Username : "sandeepproj0@gmail.com",
     Password : "Sharma@365",
     To : 'sandeepproj0@gmail.com',
