@@ -404,8 +404,8 @@
               </div>
             <!-- right side  -->
             <div class="mt-20 w-full lg:w-1/2 px-10 mb-15">
-              <form onsubmit="sendEmail(); reset(); return false;" class="flex flex-col gap-2 " >
-
+              <form action="https://formspree.io/f/myznkoyg"
+                method="POST"class="flex flex-col gap-2 " >
                 <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="text" id="name" name="name" placeholder="Enter your name">
                 <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="email" id="email" name="email" placeholder="Enter your email">
                 <input class="bg-stone-500 px-4 py-3 text-black rounded text-md font-semibold" type="text" id="subject" name="subject" placeholder="Enter your subject">
@@ -421,6 +421,5 @@
   <script>
     AOS.init();
   </script>
-  <script src=" https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>

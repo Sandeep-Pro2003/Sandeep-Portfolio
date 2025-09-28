@@ -120,20 +120,3 @@ setInterval(() => {
     clearInterval();
   }
 }, 24)
-
-function sendEmail() {
-  Email.send({
-    Host: "s1.gmail.com",
-    Username: "sandeepproj0@gmail.com",
-    Password: "Sharma@365",
-    To: 'sandeepproj0@gmail.com',
-    From: document.querySelector("#email").value,
-    Subject: "New Contact from Portfolio Site",
-    Body: "Name: " + document.querySelector("#name").value
-      + "<br> Email: " + document.querySelector("#email").value
-      + "<br> Subject: " + document.querySelector("#subject").value
-      + "<br> Message: " + document.querySelector("#message").value
-  }).then(
-    message => alert("Message sent Successfully")
-  );
-}
